@@ -22,8 +22,8 @@ The out-of-fold (OOF) predicted probabilities from all 4 models are concatenated
 ## Repository Blueprint
 
 ```text
-├── notebooks/
-│   └── ensemble_pipeline.py     # Unified, GPU-accelerated production script
+├── Notebook/
+│   └── predicting-stellar-class.ipynb     # Unified, GPU-accelerated production script
 ├── output/
 │   └── submission.csv           # Final generated test inference predictions
 ├── README.md                    # Core project introduction & setup layout
