@@ -93,7 +93,7 @@ These metrics measure the acceleration of energy distribution across the optical
 
 * **Mechanics:** Continuous features are fed to a custom PyTorch Multi-Layer Perceptron (`RealMLP`) containing sequential `Linear`, `LayerNorm`, `ReLU`, and `Dropout` layers.
 * **Strict Anti-Leakage Protocol:** Neural networks require zero-mean, unit-variance inputs to prevent gradient saturation. However, scaling across the entire dataset introduces data leakage by exposing global distribution parameters (mean and standard deviation) to the local validation folds.
-* **Implementation:** To enforce mathematical isolation, a new `StandardScaler` instance is instantiated inside every fold loop. It is fitted **exclusively** on the active training slice ($X_{\text{tr\_trees}}$), and then applied to transform the validation slice ($X_{\text{val\_trees}}$) and test matrix ($x_{\text{test\_encoded}}$).
+* **Implementation:** To enforce mathematical isolation, a new `StandardScaler` instance is instantiated inside every fold loop. It is fitted **exclusively** on the active training slice ($X\_{\text{tr\_trees}}$), and then applied to transform the validation slice ($X\_{\text{val\_trees}}$) and test matrix ($x\_{\text{test\_encoded}}$).
 
 ---
 
